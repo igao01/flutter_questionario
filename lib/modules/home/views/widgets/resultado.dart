@@ -24,9 +24,17 @@ class Resultado extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-            child: Text(
-          fraseResultado,
-          style: TextStyle(fontSize: 24),
+            child: Column(
+          children: [
+            Text(
+              '$pontuacao Pontos',
+              style: TextStyle(fontSize: 24),
+            ),
+            Text(
+              fraseResultado,
+              style: TextStyle(fontSize: 24),
+            ),
+          ],
         )),
         ElevatedButton(
           onPressed: reset,
