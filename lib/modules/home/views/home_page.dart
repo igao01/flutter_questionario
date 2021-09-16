@@ -17,13 +17,13 @@ class HomePage extends GetView<HomeController> {
           () => controller.temPerguntaSelecionada.value
               ? Questionario(
                   perguntaSelecionada:
-                      controller.perguntas[controller.indexPerguntaSelecionada.toInt()].cast()['pergunta'],
+                      controller.perguntas[controller.indexPerguntaSelecionada.value].cast()['pergunta'],
                   responder: (pontuacao) => controller.responder(pontuacao),
                   respostas: controller.perguntas[controller.indexPerguntaSelecionada.toInt()]['respostas'],
                 )
               : Resultado(
                   reset: controller.reiniciar,
-                  pontuacao: controller.pontuacaoTotal.toInt(),
+                  pontuacao: controller.pontuacaoTotal.value,
                 ),
         ),
       ),

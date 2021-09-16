@@ -16,7 +16,7 @@ class HomeController extends GetxController {
     // pega as perguntas no repositorio
     perguntas = rep.perguntas;
     // pega a primeira pergunta
-    perguntaSelecionada = perguntas[indexPerguntaSelecionada.toInt()].toString();
+    perguntaSelecionada = perguntas[indexPerguntaSelecionada.value].toString();
     super.onInit();
   }
 
